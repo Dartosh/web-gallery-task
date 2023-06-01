@@ -3,6 +3,7 @@ const imagesContainer = document.getElementById('images-container');
 const modalWindow = document.getElementById('image-view-modal-wrapper');
 const modalWindowImage = document.getElementById('image-view-modal__image');
 const closeModalButton = document.getElementById('close-button');
+const sectionName = document.getElementById('section-name');
 
 const navBarLiElements = [];
 let isModalOpen = false;
@@ -40,6 +41,8 @@ const renderImagesList = (sectionId) => {
     for (let i = 1; i <= SECTIONS[sectionId].count; i++) {
         const imageCardElement = document.createElement('div');
         const imgElement = document.createElement('img');
+
+        sectionName.textContent = SECTIONS[sectionId].name;
 
         imageCardElement.classList.add('image-card');
 
